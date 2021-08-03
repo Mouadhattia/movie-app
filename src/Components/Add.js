@@ -15,7 +15,7 @@ function Add({AddMovies}) {
         }))
     }
     return (
-        <div>
+        <div className='add'>
              
       <Button variant="primary" onClick={handleShow}>
       Add Movie

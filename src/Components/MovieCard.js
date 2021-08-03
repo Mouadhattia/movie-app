@@ -1,19 +1,28 @@
 import React from 'react'
 import { Card } from 'react-bootstrap';
-import StarRatingComponent from 'react-star-rating-component';
+
+import ReactStars from "react-rating-stars-component";
 
 function MovieCard({movie}) {
     return (
         <div>
-           <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={movie.posterURL} />
-  <Card.Body>
+           <Card className='card' >
+  <Card.Img style={{  height:'30rem' }} variant="top" src={movie.posterURL} />
+  <Card.Body className='cardbody'>
     <Card.Title>{movie.title}</Card.Title>
     <Card.Text>
      {movie.description}
-    </Card.Text>
+    </Card.Text >
+    <div className='stars'>
+    <ReactStars
     
-    <StarRatingComponent value={movie.rating} />
+    count={5}
+    value={movie.rating}
+    size={24}
+    activeColor="#ffd700"
+    edit= {false}
+  />,  
+  </div>   
           
          
     
